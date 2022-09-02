@@ -1,0 +1,93 @@
+[ {
+  "id" : "f1b949eb-f1a9-13f0-7fdc-1d769f92d409",
+  "name" : "logo_field",
+  "display_width" : null,
+  "label" : "Logo",
+  "required" : false,
+  "locked" : true,
+  "show_loading" : false,
+  "type" : "logo",
+  "default" : {
+    "override_inherited_src" : true,
+    "src" : "https://www.remotish.agency/hubfs/LogoMark.svg",
+    "alt" : "LogoMark",
+    "suppress_company_name" : true,
+    "width" : 77,
+    "height" : 71
+  }
+}, {
+  "id" : "34ab2cd8-cd67-aff2-e989-e9591e75097b",
+  "name" : "menu_field",
+  "display_width" : null,
+  "label" : "Menu",
+  "required" : false,
+  "locked" : true,
+  "type" : "menu",
+  "default" : 74290481796
+}, {
+  "id" : "487aa2e6-9425-c40f-0213-06999d914bab",
+  "name" : "time_icon",
+  "display_width" : null,
+  "label" : "Time Icon",
+  "required" : false,
+  "locked" : true,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://www.remotish.agency/hubfs/Vector%20(4).png",
+    "alt" : "Vector (4)",
+    "loading" : "lazy",
+    "width" : 58,
+    "height" : 58,
+    "max_width" : 58,
+    "max_height" : 58
+  }
+}, {
+  "id" : "c39a7b0f-0d08-9f67-2edd-130a7fe369d6",
+  "name" : "time",
+  "display_width" : null,
+  "label" : "Time",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "10:00 AM - 8:00 PM"
+}, {
+  "id" : "0e01384c-8703-1c15-dce4-df1dbd199eb6",
+  "name" : "phone",
+  "display_width" : null,
+  "label" : "Phone",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "+1 999 999 999 99"
+}, {
+  "id" : "d86b3c82-1cc8-873e-4ae7-5975bcbf7859",
+  "name" : "phone_icon",
+  "display_width" : null,
+  "label" : "Phone Icon",
+  "required" : false,
+  "locked" : true,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://www.remotish.agency/hubfs/Vector%20(2).png",
+    "alt" : "Vector (2)",
+    "loading" : "lazy",
+    "width" : 58,
+    "height" : 59,
+    "max_width" : 58,
+    "max_height" : 59
+  }
+} ]

@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Ad:SOLID",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 73986224054,
+  "label" : "Button",
+  "is_available_for_new_content" : true
+}

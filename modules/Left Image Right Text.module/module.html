@@ -1,0 +1,45 @@
+{% if module.style.invert_order == 'false' %}
+<section class="leftimage_righttext__main">
+    <div class="container">
+       <div class="leftimage_righttext__row"> 
+          <div class="leftimage_righttext__left">
+            {% if module.image_field.src %}
+            {% set sizeAttrs = 'width="{{ module.image_field.width }}" height="{{ module.image_field.height }}"' %}
+            {% if module.image_field.size_type == 'auto' %}
+            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+            {% elif module.image_field.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ module.image_field.max_width }}" height="{{ module.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading }}"' : '' %}
+            <img src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+         </div>
+         <div class="leftimage_righttext__right">
+              {{ module.richtext_field }}
+         </div>
+      </div>
+  </div>
+</section>
+{% else %}
+<section class="leftimage_righttext__main">
+    <div class="container">
+       <div class="leftimage_righttext__row"> 
+         <div class="leftimage_righttext__right">
+              {{ module.richtext_field }}
+         </div>
+									<div class="leftimage_righttext__left">
+            {% if module.image_field.src %}
+            {% set sizeAttrs = 'width="{{ module.image_field.width }}" height="{{ module.image_field.height }}"' %}
+            {% if module.image_field.size_type == 'auto' %}
+            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+            {% elif module.image_field.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ module.image_field.max_width }}" height="{{ module.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading }}"' : '' %}
+            <img src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+         </div>
+      </div>
+  </div>
+</section>
+{% endif %}

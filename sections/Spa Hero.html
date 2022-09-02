@@ -1,0 +1,48 @@
+<!--
+  templateType: section
+  label: Hero banner
+  isAvailableForNewContent: true
+  screenshotPath: ../images/Thumbnails/sectionHero.png
+  description: "Standard Spa Hero"
+-->
+
+{% dnd_section
+  background_color = "#F6FAFB",
+  padding={
+    "default": {
+      "top": 100,
+      "right": 0,
+      "bottom": 100,
+      "left": 0
+    },
+    "mobile": {
+      "top": 80,
+      "right": 0,
+      "bottom": 80,
+      "left": 0
+    }
+  },
+  vertical_alignment="MIDDLE"
+%}
+  {% dnd_column %}
+ {% dnd_row %}
+      {% dnd_module
+                    path='../modules/Hero Section', 
+                    label="Hero Section"
+                    links = [
+                       {
+                        text_field_1 : "Instagram",
+                       },
+                        {
+                        text_field_1 : "Facebook",
+                       },
+                        {
+                        text_field_1 : "Youtube",
+                       }
+                    
+                    ]
+                  %}
+            {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

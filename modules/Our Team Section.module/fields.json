@@ -1,0 +1,89 @@
+[ {
+  "id" : "0672323f-9dab-cffc-1c01-fc6901c2ec2d",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Our Team"
+}, {
+  "id" : "be8966d0-fd56-0c87-61cc-59b77842d95a",
+  "name" : "single_slide",
+  "display_width" : null,
+  "label" : "Single Slide",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "c851fce1-76ae-e73d-deda-57d545a9fb76",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "ba3750ef-17ce-bfc9-a23f-387413c151fe",
+    "name" : "thumb",
+    "display_width" : null,
+    "label" : "Thumb",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Imported%20images/Rectangle%207.png",
+      "alt" : "Rectangle 7",
+      "loading" : "lazy",
+      "width" : 392,
+      "height" : 383,
+      "max_width" : 392,
+      "max_height" : 383
+    }
+  }, {
+    "id" : "c851fce1-76ae-e73d-deda-57d545a9fb76",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Lorem Ipsum"
+  }, {
+    "id" : "79922006-b8bb-a3a5-a1c8-ffb698a437a8",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "10 Years of Spa"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Imported%20images/Rectangle%207.png",
+      "alt" : "Rectangle 7",
+      "loading" : "lazy",
+      "width" : 392,
+      "height" : 383,
+      "max_width" : 392,
+      "max_height" : 383
+    },
+    "title" : "Lorem Ipsum",
+    "content" : "10 Years of Spa"
+  }
+} ]

@@ -1,0 +1,9 @@
+{
+  "global" : false,
+  "master_language" : "en",
+  "icon" : "fontawesome-5.14.0:Alternate%20Sort%20Numeric%20Up:SOLID",
+  "host_template_types" : [ "BLOG_LISTING" ],
+  "module_id" : 73989174147,
+  "label" : "Blog pagination",
+  "is_available_for_new_content" : true
+}

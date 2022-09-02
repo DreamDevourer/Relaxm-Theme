@@ -1,0 +1,111 @@
+[ {
+  "id" : "6e2405e5-3464-a6a5-37fb-d1664b45c128",
+  "name" : "text_field_1",
+  "display_width" : null,
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Visit Our Main Location"
+}, {
+  "id" : "8fd3fb50-cabd-2e12-dcf1-0a8fc3f2e416",
+  "name" : "map_link",
+  "display_width" : null,
+  "label" : "Map Link",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.332179094592!2d-122.01116068483923!3d37.33464377984196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb596e9e188fd%3A0x3b0d8391510688f0!2sApple%20Park!5e0!3m2!1sen!2sin!4v1653364123641!5m2!1sen!2sin"
+}, {
+  "id" : "a0b733bd-4dfd-894b-7b11-044d7ef832ca",
+  "name" : "address_group",
+  "display_width" : null,
+  "label" : "Address group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "a4700964-52eb-ea08-0ae8-8750b76eb833",
+    "name" : "icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Location.svg",
+      "alt" : "Location",
+      "loading" : "lazy",
+      "width" : 50,
+      "height" : 58,
+      "max_width" : 50,
+      "max_height" : 58
+    }
+  }, {
+    "id" : "9c171186-3b49-94c9-89f0-1f22386dc092",
+    "name" : "text_field",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Label Text"
+  }, {
+    "id" : "c869bd94-8a1e-eb84-41fe-a4ab691f5393",
+    "name" : "richtext_field",
+    "display_width" : null,
+    "label" : "Rich text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Street Address <br>City, ST 0000.<br>Country</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Location.svg",
+      "alt" : "Location",
+      "loading" : "lazy",
+      "width" : 50,
+      "height" : 58,
+      "max_width" : 50,
+      "max_height" : 58
+    },
+    "text_field" : "Label Text",
+    "richtext_field" : "<p>Street Address <br>City, ST 0000.<br>Country</p>"
+  }, {
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Location.svg",
+      "alt" : "Location",
+      "loading" : "lazy",
+      "width" : 50,
+      "height" : 58,
+      "max_width" : 50,
+      "max_height" : 58
+    },
+    "text_field" : "Label Text",
+    "richtext_field" : "<p>Street Address <br>City, ST 0000.<br>Country</p>"
+  } ]
+} ]

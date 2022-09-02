@@ -1,0 +1,254 @@
+[ {
+  "id" : "4a24e26a-6dda-f557-9b89-fea73976b205",
+  "name" : "logo_field",
+  "display_width" : null,
+  "label" : "Logo",
+  "required" : false,
+  "locked" : false,
+  "show_loading" : false,
+  "type" : "logo",
+  "default" : {
+    "override_inherited_src" : true,
+    "src" : "https://www.remotish.agency/hubfs/Relaxm.png",
+    "alt" : "Relaxm",
+    "suppress_company_name" : true,
+    "width" : 160,
+    "height" : 48
+  }
+}, {
+  "id" : "6b8519ea-922d-e709-9acc-e52c13f012ce",
+  "name" : "column_1",
+  "display_width" : null,
+  "label" : "Column 1",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "99eaa26a-8ead-1a3f-476e-3edea1026764",
+    "name" : "text_field",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Visit",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Visit"
+  }, {
+    "id" : "34d42421-bd02-433b-0ba5-cb4010bac2c5",
+    "name" : "richtext_field",
+    "display_width" : null,
+    "label" : "Rich text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>999 S. Road Ave<br>San Diego IL 99999<br><a href=\"tel:999-999-999\">999-999-999</a><br><a href=\"mailto:exuberante@exu.com\">exuberante@exu.com</a></p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text_field" : "Visit",
+    "richtext_field" : "<p>999 S. Road Ave<br>San Diego IL 99999<br><a href=\"tel:999-999-999\">999-999-999</a><br><a href=\"mailto:exuberante@exu.com\">exuberante@exu.com</a></p>"
+  }
+}, {
+  "id" : "86a4176d-699f-03c0-0cbf-ad7f5b4887e7",
+  "name" : "column_2",
+  "display_width" : null,
+  "label" : "Column 2",
+  "inline_help_text" : "Add social links here.",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "af3698d1-469b-4032-12b6-a64647a9816a",
+    "name" : "text_field",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Connect",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Connect"
+  }, {
+    "id" : "9a958fd6-fc51-f71c-b568-14c522f66d03",
+    "name" : "social_media_group",
+    "display_width" : null,
+    "label" : "Social Media group",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 4
+    },
+    "children" : [ {
+      "id" : "668e56a2-d4cf-c0bb-f5f6-2ea8a721f286",
+      "name" : "icon_field",
+      "display_width" : null,
+      "label" : "Icon",
+      "required" : false,
+      "locked" : false,
+      "icon_set" : "fontawesome-5.14.0",
+      "type" : "icon",
+      "default" : {
+        "name" : "Facebook F",
+        "unicode" : "f39e",
+        "type" : "REGULAR"
+      }
+    }, {
+      "id" : "b073705c-dd23-9d23-fff9-bcd1a7aada20",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "icon_field" : {
+        "name" : "Facebook F",
+        "unicode" : "f39e",
+        "type" : "REGULAR"
+      }
+    }, {
+      "icon_field" : {
+        "name" : "Facebook F",
+        "unicode" : "f39e",
+        "type" : "REGULAR"
+      }
+    }, {
+      "icon_field" : {
+        "name" : "Facebook F",
+        "unicode" : "f39e",
+        "type" : "REGULAR"
+      }
+    }, {
+      "icon_field" : {
+        "name" : "Facebook F",
+        "unicode" : "f39e",
+        "type" : "REGULAR"
+      }
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text_field" : "Connect",
+    "social_media_group" : [ {
+      "icon_field" : {
+        "name" : "Facebook F",
+        "unicode" : "f39e",
+        "type" : "REGULAR"
+      }
+    }, {
+      "icon_field" : {
+        "name" : "Facebook F",
+        "unicode" : "f39e",
+        "type" : "REGULAR"
+      }
+    }, {
+      "icon_field" : {
+        "name" : "Facebook F",
+        "unicode" : "f39e",
+        "type" : "REGULAR"
+      }
+    }, {
+      "icon_field" : {
+        "name" : "Facebook F",
+        "unicode" : "f39e",
+        "type" : "REGULAR"
+      }
+    } ]
+  }
+}, {
+  "id" : "a6a43a25-ce74-1674-f2e9-6169c46a92c0",
+  "name" : "column_3",
+  "display_width" : null,
+  "label" : "Column 3",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "7a3dbdff-f608-4e09-a002-8c6fde572293",
+    "name" : "text_field_1",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "About",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "About"
+  }, {
+    "id" : "08a9dabf-a2f4-f178-bdca-59b58c37c5b5",
+    "name" : "richtext_field_1",
+    "display_width" : null,
+    "label" : "Rich text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames enim habitant at cursus arcu velit.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text_field_1" : "About",
+    "richtext_field_1" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames enim habitant at cursus arcu velit.</p>"
+  }
+}, {
+  "id" : "c59a5469-f550-2f47-43c1-5c569fb95159",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "30b74939-0b55-f194-380a-78192529b91c",
+    "name" : "icon_color",
+    "display_width" : null,
+    "label" : "Icon Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "icon_color" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "f4e09767-c393-c4da-1825-29c0526fbc00",
+  "name" : "text_field_2",
+  "display_width" : null,
+  "label" : "Credits",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "Copyright @{{year}} <br> Developed by Remotish Agency",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Copyright @{{year}} <br> Developed by Remotish Agency"
+} ]

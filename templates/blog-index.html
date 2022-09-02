@@ -1,0 +1,85 @@
+<!--
+  templateType: blog_listing
+  isAvailableForNewContent: true
+  label: Relaxm - blog listing
+  screenshotPath: ../images/Thumbnails/BlogR.png
+-->
+{% set template_css = "../../css/templates/blog.css" %}
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--blog-index"
+%}
+
+  {# Hero banner #}
+  
+
+
+
+ {% dnd_section
+       full_width = true,
+       padding={
+         'default': {'top': 80,'bottom': 80 },
+        'mobile': {'top': 70,'bottom': 0 }
+    }
+     
+      %}
+                    {% dnd_module
+                        path='../modules/Featured Content', 
+
+                        %}
+                    {% end_dnd_module %}
+
+
+
+
+  {% end_dnd_section %}
+
+
+
+ {% dnd_section
+       full_width = true,
+       padding={
+         'default': {'top': 30,'bottom': 80 },
+        'mobile': {'top':70,'bottom': 0 }
+    }
+     
+      %}
+                    {% dnd_module
+                        path='../modules/Blog Listing In Index', 
+
+                        %}
+                    {% end_dnd_module %}
+
+
+
+
+  {% end_dnd_section %}
+
+
+
+
+ 
+  {# Blog listings and pagination #}
+
+  {% dnd_section
+    vertical_alignment="TOP"
+       full_width = true,
+         padding={
+         'default': {'top': 0,'bottom': 80 },
+        'mobile': {'top': 0,'bottom': 50 }
+    }
+  %}
+    {% dnd_column %}
+    
+      {% dnd_row %}
+        {% dnd_module path="../modules/blog-pagination" %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+{% end_dnd_area %}
+{% endblock body %}

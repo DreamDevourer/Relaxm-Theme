@@ -1,0 +1,82 @@
+<div class="faq_section">
+  <div class="container">
+    {% if module.title %}
+    <div class="heading">
+      <h2>{{ module.title }}</h2>
+    </div>
+    {% endif %}
+    <div class="faq_wrap">
+
+      <div class="tab-section">
+        <div class="tab">
+
+          <div class="tab_left">
+            {% for item in module.single_accordion %}
+            <div class="tab_left_single">
+              <div class="accordion-title">
+                {{ item.title }}
+              </div>
+              <div class="tab-list accordion-text">
+                <ul>
+                  {% for item2 in item.single_tab %}
+                  <li>{{ item2.title }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+
+          <div class="tab-content-group">
+            {% for item in module.single_accordion %}
+            {% set i = loop.index %}
+            <div class="tab-content-group-single">
+              <div class="accordion-title1">
+                {{ item.title }}
+              </div>
+              <div class="tab-content-list accordion-text1">
+                {% for item2 in item.single_tab %}
+                <div class="tab-content">
+                  <div class="title">
+                    {{ item2.title }}
+                  </div>
+                  <div class="inner">
+                    <div class="tab_ctn">
+                      <div class="tab_ctn_left">
+                        <h4>{{ item2.content_title }} - {{i}} {{ loop.index }}</h4>
+                        <div class="text">
+                          {{ item2.content }}
+                        </div>
+                        {% if item2.button.text_field %}
+                        <div class="button_wrap">
+                          {% set href = item2.button.link_field.url.href %}
+                          {% if item2.button.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                          {% set href = "mailto:" + href %}
+                          {% endif %}
+                          <a class="button" href="{{ href }}"
+                             {% if item2.button.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                             {% if item2.button.link_field.rel %}rel="{{ item2.button.link_field.rel }}"{% endif %}
+                             >
+                            {{ item2.button.text_field }}
+                          </a>
+                        </div>
+                        {% endif %}
+                      </div>
+                      <div class="tab_ctn_right">
+                        <img src="{{ item2.thumb.src }}" alt="{{ item2.thumb.alt }}">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %} 
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

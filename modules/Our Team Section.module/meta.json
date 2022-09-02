@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:User%20Friends:SOLID",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 74254700445,
+  "label" : "Our Team",
+  "is_available_for_new_content" : true
+}

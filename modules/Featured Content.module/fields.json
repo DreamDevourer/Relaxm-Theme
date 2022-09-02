@@ -1,0 +1,346 @@
+[ {
+  "id" : "bac9fc0f-1ce1-00c3-903b-b959f989af07",
+  "name" : "header",
+  "display_width" : null,
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Featured content"
+}, {
+  "id" : "fa3b1072-33d5-e3fe-493e-1fc6471ed1cb",
+  "name" : "icon",
+  "display_width" : null,
+  "label" : "Icon",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://www.remotish.agency/hubfs/Image2022/il_world.svg",
+    "alt" : "il_world",
+    "loading" : "lazy",
+    "width" : 77,
+    "height" : 87,
+    "max_width" : 77,
+    "max_height" : 87
+  }
+}, {
+  "id" : "004738da-5640-f473-11a8-e1a51c085475",
+  "name" : "blog_field",
+  "display_width" : null,
+  "label" : "Blog",
+  "required" : false,
+  "locked" : false,
+  "type" : "blog",
+  "default" : ""
+}, {
+  "id" : "aca77594-9d48-b1af-9490-786fe28e9fbd",
+  "name" : "tag_field",
+  "display_width" : null,
+  "label" : "Featured Tag",
+  "required" : false,
+  "locked" : false,
+  "tag_value" : "SLUG",
+  "type" : "tag",
+  "default" : "hubspot-cms"
+}, {
+  "id" : "961e7427-16a6-86c6-487e-6ba6f5db29b1",
+  "name" : "number_of_post",
+  "display_width" : null,
+  "label" : "Number Of post",
+  "required" : false,
+  "locked" : false,
+  "display" : "slider",
+  "step" : 1,
+  "type" : "number",
+  "default" : 3
+}, {
+  "id" : "b1c1f050-3f12-fff7-e2a1-2d9063b2bceb",
+  "name" : "content_box",
+  "display_width" : null,
+  "label" : "Content Box",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "cca513b8-fcb9-3fe5-4fb1-589014a4b99d",
+    "name" : "richtext_field",
+    "display_width" : null,
+    "label" : "Rich text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<h3>Connect with me</h3>\n<p>Since that trip in 2007 I became hooked on photographing.</p>"
+  }, {
+    "id" : "2640318f-c7a1-e316-43ea-a6e70b0bcf08",
+    "name" : "social_area",
+    "display_width" : null,
+    "label" : "Social Area",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 5
+    },
+    "children" : [ {
+      "id" : "580dfff2-6f5b-c5b4-b690-1786a30d2ae2",
+      "name" : "icon_image",
+      "display_width" : null,
+      "label" : "Icon Image",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : true,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/Image2022/akar-icons_facebook-fill-1.svg",
+        "alt" : "akar-icons_facebook-fill-1",
+        "loading" : "lazy",
+        "width" : 49,
+        "height" : 49,
+        "max_width" : 49,
+        "max_height" : 49
+      }
+    }, {
+      "id" : "aa8d39cf-2184-8e3b-dce5-29bca0957409",
+      "name" : "link_field",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/Image2022/akar-icons_facebook-fill-1.svg",
+        "alt" : "akar-icons_facebook-fill-1",
+        "loading" : "lazy",
+        "width" : 49,
+        "height" : 49,
+        "max_width" : 49,
+        "max_height" : 49
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/Image2022/akar-icons_facebook-fill-1.svg",
+        "alt" : "akar-icons_facebook-fill-1",
+        "loading" : "lazy",
+        "width" : 49,
+        "height" : 49,
+        "max_width" : 49,
+        "max_height" : 49
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/Image2022/akar-icons_facebook-fill-1.svg",
+        "alt" : "akar-icons_facebook-fill-1",
+        "loading" : "lazy",
+        "width" : 49,
+        "height" : 49,
+        "max_width" : 49,
+        "max_height" : 49
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/Image2022/akar-icons_facebook-fill-1.svg",
+        "alt" : "akar-icons_facebook-fill-1",
+        "loading" : "lazy",
+        "width" : 49,
+        "height" : 49,
+        "max_width" : 49,
+        "max_height" : 49
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/Image2022/akar-icons_facebook-fill-1.svg",
+        "alt" : "akar-icons_facebook-fill-1",
+        "loading" : "lazy",
+        "width" : 49,
+        "height" : 49,
+        "max_width" : 49,
+        "max_height" : 49
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "richtext_field" : "<h3>Connect with me</h3>\n<p>Since that trip in 2007 I became hooked on photographing.</p>",
+    "social_area" : [ {
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/Image2022/akar-icons_facebook-fill-1.svg",
+        "alt" : "akar-icons_facebook-fill-1",
+        "loading" : "lazy",
+        "width" : 49,
+        "height" : 49,
+        "max_width" : 49,
+        "max_height" : 49
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/Image2022/akar-icons_facebook-fill-1.svg",
+        "alt" : "akar-icons_facebook-fill-1",
+        "loading" : "lazy",
+        "width" : 49,
+        "height" : 49,
+        "max_width" : 49,
+        "max_height" : 49
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/Image2022/akar-icons_facebook-fill-1.svg",
+        "alt" : "akar-icons_facebook-fill-1",
+        "loading" : "lazy",
+        "width" : 49,
+        "height" : 49,
+        "max_width" : 49,
+        "max_height" : 49
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/Image2022/akar-icons_facebook-fill-1.svg",
+        "alt" : "akar-icons_facebook-fill-1",
+        "loading" : "lazy",
+        "width" : 49,
+        "height" : 49,
+        "max_width" : 49,
+        "max_height" : 49
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/Image2022/akar-icons_facebook-fill-1.svg",
+        "alt" : "akar-icons_facebook-fill-1",
+        "loading" : "lazy",
+        "width" : 49,
+        "height" : 49,
+        "max_width" : 49,
+        "max_height" : 49
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }
+} ]

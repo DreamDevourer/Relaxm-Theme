@@ -1,0 +1,224 @@
+[ {
+  "id" : "e67bd50e-e3d7-12be-7cbc-0f58de1ce513",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "FAQ"
+}, {
+  "id" : "f1c8586a-27b6-2a8d-b7c7-f582cd9c8bfc",
+  "name" : "single_accordion",
+  "display_width" : null,
+  "label" : "Single Accordion",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "28102c60-262b-b3e4-1e50-938c3b138413",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "28102c60-262b-b3e4-1e50-938c3b138413",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Questions Section"
+  }, {
+    "id" : "b39f62c0-afe3-1e70-8f52-6ca1dcfdbbc9",
+    "name" : "single_tab",
+    "display_width" : null,
+    "label" : "Single Tab",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : "e14f0508-2d22-ab67-cccc-973fd4e1d030",
+      "default" : null
+    },
+    "children" : [ {
+      "id" : "e14f0508-2d22-ab67-cccc-973fd4e1d030",
+      "name" : "title",
+      "display_width" : null,
+      "label" : "Title",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Question Answer"
+    }, {
+      "id" : "8d8128fd-e526-7c5a-c0ad-efc310265601",
+      "name" : "content_title",
+      "display_width" : null,
+      "label" : "Content TItle",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Question Answer"
+    }, {
+      "id" : "c5a696eb-0477-a7aa-85b5-4a6f89b9fddb",
+      "name" : "content",
+      "display_width" : null,
+      "label" : "Content",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>\n<p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>"
+    }, {
+      "id" : "1f32743f-48b7-7087-58a0-61fbe740eb9f",
+      "name" : "button",
+      "display_width" : null,
+      "label" : "Button",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "701e7888-80d4-e610-c9b1-e10d41efbc1c",
+        "name" : "text_field",
+        "display_width" : null,
+        "label" : "Text",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "Check out!"
+      }, {
+        "id" : "5c581ec7-c830-5076-a4f0-0c327c673d76",
+        "name" : "link_field",
+        "display_width" : null,
+        "label" : "Link",
+        "required" : false,
+        "locked" : false,
+        "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+        "show_advanced_rel_options" : false,
+        "type" : "link",
+        "default" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "text_field" : "Check out!",
+        "link_field" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }
+    }, {
+      "id" : "0da911df-c7dd-fcc9-0ffd-64481e118c60",
+      "name" : "thumb",
+      "display_width" : null,
+      "label" : "Thumb",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : true,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/thumb-tab.png",
+        "alt" : "thumb-tab",
+        "loading" : "lazy",
+        "width" : 268,
+        "height" : 419,
+        "max_width" : 268,
+        "max_height" : 419
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "title" : "Question Answer",
+      "content_title" : "Question Answer",
+      "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>\n<p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>",
+      "button" : {
+        "text_field" : "Check out!",
+        "link_field" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      },
+      "thumb" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/thumb-tab.png",
+        "alt" : "thumb-tab",
+        "loading" : "lazy",
+        "width" : 268,
+        "height" : 419,
+        "max_width" : 268,
+        "max_height" : 419
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "title" : "Questions Section",
+    "single_tab" : {
+      "title" : "Question Answer",
+      "content_title" : "Question Answer",
+      "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>\n<p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>",
+      "button" : {
+        "text_field" : "Check out!",
+        "link_field" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      },
+      "thumb" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/thumb-tab.png",
+        "alt" : "thumb-tab",
+        "loading" : "lazy",
+        "width" : 268,
+        "height" : 419,
+        "max_width" : 268,
+        "max_height" : 419
+      }
+    }
+  }
+} ]

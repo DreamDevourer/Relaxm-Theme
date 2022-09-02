@@ -1,0 +1,63 @@
+<div class="header__main">
+  <div class="container">
+      <div class="header__row">
+         <div class="header__left">
+           <div class="logo">
+              {% set loadingAttr = module.logo_field.loading != 'disabled' ? '{{ module.logo_field.loading }}' : '' %}
+
+               {% logo
+                override_inherited_src="{{ module.logo_field.override_inherited_src }}"
+                src="{{ module.logo_field.src }}"
+                alt="{{ module.logo_field.alt }}"
+                width="{{ module.logo_field.width }}"
+                height="{{ module.logo_field.height }}"
+                loading="{{ loadingAttr }}"
+                suppress_company_name="{{ module.logo_field.suppress_company_name }}"
+              %}
+           </div>
+           <div class="navigation">
+               <nav class="mainmenu">
+                 {% menu id="{{ module.menu_field }}" %}
+               </nav>
+           </div>
+         </div>
+         <div class="header__right">
+            <ul>
+              <li> 
+                <span class="he_icon">
+                  {% if module.time_icon.src %}
+                  {% set sizeAttrs = 'width="{{ module.time_icon.width }}" height="{{ module.time_icon.height }}"' %}
+                  {% if module.time_icon.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                  {% elif module.time_icon.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.time_icon.max_width }}" height="{{ module.time_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                  {% endif %}
+                  {% set loadingAttr = module.time_icon.loading != 'disabled' ? 'loading="{{ module.time_icon.loading }}"' : '' %}
+                  <img src="{{ module.time_icon.src }}" alt="{{ module.time_icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  {% endif %}
+                </span>
+                <span class="he_time">{{ module.time }}</span>
+              </li>
+              <li> 
+                <span class="he_icon">
+                  {% if module.phone_icon.src %}
+                  {% set sizeAttrs = 'width="{{ module.phone_icon.width }}" height="{{ module.phone_icon.height }}"' %}
+                  {% if module.phone_icon.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                  {% elif module.phone_icon.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.phone_icon.max_width }}" height="{{ module.phone_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                  {% endif %}
+                  {% set loadingAttr = module.phone_icon.loading != 'disabled' ? 'loading="{{ module.phone_icon.loading }}"' : '' %}
+                  <img src="{{ module.phone_icon.src }}" alt="{{ module.phone_icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  {% endif %}
+                </span>
+                <span class="he_phone">
+                  <a href="tel:{{ module.phone }}"> {{ module.phone }} </a>
+                  
+                </span>
+              </li>
+           </ul>
+         </div>
+      </div>
+  </div>
+</div>

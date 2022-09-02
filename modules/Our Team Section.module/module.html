@@ -1,0 +1,95 @@
+<div class="our_team_section">
+  <div class="container">
+    <div class="our_team__header">
+      <h2>
+        {{ module.title }}
+      </h2>
+    </div>
+    <div class="our_team_slider">
+      {% for item in module.single_slide %}
+      <div class="sinlge_slide">
+        <div class="thumb">
+          <img src="{{ item.thumb.src }}" alt="{{ item.thumb.alt }}">
+        </div>
+        <div class="sinlge_content">
+          <div class="name">{{ item.title }}</div>
+          <div class="sub-title">{{ item.content }}</div>
+        </div>
+      </div>
+      {% endfor %}
+   
+ 
+    </div>
+    
+    <div class="slick_slider__nav">
+      <div class="slick_slider__left">
+        
+      </div>
+      <div class="slick_slider__right">
+         <span class="ss_right"> 
+           <svg width="11" height="23" viewBox="0 0 11 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M2.0461e-06 10.5041L11 0L11 3.05007L1.97713 11.4844L2.05801 11.2043L2.05801 11.7957L1.97713 11.5156L11 19.9499L11 23L1.87197e-06 12.4959L2.0461e-06 10.5041Z" fill="#B18372"/>
+           </svg>
+
+        </span>
+        <span class="ss_left"> 
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="23" viewBox="0 0 11 23" fill="none">
+            <path d="M11 12.4959L0 23L0 19.9499L9.02287 11.5156L8.94199 11.7957V11.2043L9.02287 11.4844L0 3.05007L0 0L11 10.5041V12.4959Z" fill="#B18372"/>
+          </svg>
+        
+        </span>
+      </div>
+    </div>
+    
+    
+    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+  </div>
+</div>
+
+{{ require_css("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css") }}
+{{ require_js("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js") }}
+{% require_js  %}
+<script>
+
+  $('.our_team_slider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  dots: true,
+  appendDots: $('.slick_slider__left'),
+  prevArrow: $('.ss_right'),
+  nextArrow: $('.ss_left'),
+    
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+    
+});
+  
+</script>
+{% end_require_js %}

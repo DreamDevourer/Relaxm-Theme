@@ -1,0 +1,31 @@
+[ {
+  "id" : "dcfd1b85-4c0b-11ce-9b2f-04c6ce23ecae",
+  "name" : "left_text",
+  "display_width" : null,
+  "label" : "Left Text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h1>Become A<br>Better Person</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet tempor tortor eu nunc sodales aliquam.</p>"
+}, {
+  "id" : "6767c415-5ff5-60a7-8161-da13cb3a32f4",
+  "name" : "image_field",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://www.remotish.agency/hubfs/IMAGE%20(3).png",
+    "alt" : "IMAGE (3)",
+    "loading" : "lazy",
+    "width" : 660,
+    "height" : 825,
+    "max_width" : 660,
+    "max_height" : 825
+  }
+} ]

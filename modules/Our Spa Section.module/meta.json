@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Spa:SOLID",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 74219049737,
+  "label" : "Our Spa",
+  "is_available_for_new_content" : true
+}

@@ -1,0 +1,112 @@
+[ {
+  "id" : "755234e1-d849-c1f3-90ac-e128874b5625",
+  "name" : "header",
+  "display_width" : null,
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Our locations"
+}, {
+  "id" : "0aef4f4b-0717-e2f8-d3e1-c9d3033e1262",
+  "name" : "field_group",
+  "display_width" : null,
+  "label" : "Field group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "89a5d9f0-71ff-0eae-72b3-9d88d80f9191",
+    "name" : "icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Location.svg",
+      "alt" : "Location",
+      "loading" : "lazy",
+      "width" : 50,
+      "height" : 58,
+      "max_width" : 50,
+      "max_height" : 58
+    }
+  }, {
+    "id" : "c4410b82-b9c2-a7cc-dab3-6b79941c038a",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Main Location"
+  }, {
+    "id" : "b0c2c252-33f0-a769-40fa-98ae866f34da",
+    "name" : "address",
+    "display_width" : null,
+    "label" : "Address",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>999 S. Road Ave<br>San Diego, IL 99<br>USA</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Location.svg",
+      "alt" : "Location",
+      "loading" : "lazy",
+      "width" : 50,
+      "height" : 58,
+      "max_width" : 50,
+      "max_height" : 58
+    },
+    "header" : "Main Location",
+    "address" : "<p>999 S. Road Ave<br>San Diego, IL 99<br>USA</p>"
+  }, {
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Location.svg",
+      "alt" : "Location",
+      "loading" : "lazy",
+      "width" : 50,
+      "height" : 58,
+      "max_width" : 50,
+      "max_height" : 58
+    },
+    "header" : "Main Location",
+    "address" : "<p>999 S. Road Ave<br>San Diego, IL 99<br>USA</p>"
+  }, {
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Location.svg",
+      "alt" : "Location",
+      "loading" : "lazy",
+      "width" : 50,
+      "height" : 58,
+      "max_width" : 50,
+      "max_height" : 58
+    },
+    "header" : "Main Location",
+    "address" : "<p>999 S. Road Ave<br>San Diego, IL 99<br>USA</p>"
+  } ]
+} ]

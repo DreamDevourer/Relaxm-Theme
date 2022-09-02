@@ -1,0 +1,36 @@
+[ {
+  "id" : "c90011dc-122f-43ac-76fd-61b2eae59f5f",
+  "name" : "header",
+  "display_width" : null,
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Let’s build a future together."
+}, {
+  "id" : "81df43f7-2079-f02b-3fdc-ecff6bfdc21a",
+  "name" : "form_field",
+  "display_width" : null,
+  "label" : "Form",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "form_id" : "",
+    "response_type" : "inline",
+    "message" : "<p>Thank you so much for contacting us. If you are looking to have an introductory call with us go ahead and schedule a time <a href=\"https://app.hubspot.com/meetings/nicole-turner\" rel=\" noopener\">here</a>.</p>",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+}, {
+  "id" : "f7a2b5c5-2c18-95e2-a231-bf7aa610cef7",
+  "name" : "followupemail_field",
+  "display_width" : null,
+  "label" : "Followup email",
+  "required" : false,
+  "locked" : false,
+  "type" : "followupemail"
+} ]

@@ -1,0 +1,13 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Copy:SOLID",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 75078120267,
+  "js_assets" : [ {
+    "autoload" : true,
+    "path" : "../../js/Slick.min.js",
+    "name" : "Slick.min.js"
+  } ],
+  "label" : "Featured Content",
+  "is_available_for_new_content" : true
+}

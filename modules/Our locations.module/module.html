@@ -1,0 +1,40 @@
+<section class="our_locations__main">
+    <div class="container">
+           <div class="our_locations__header">
+              <h2>
+                {{ module.header }}
+             </h2>
+         </div>
+          <div class="our_locations__row">
+            {% for item in module.field_group %}
+               <div class="our_locations__column">
+                 {% if item.icon.src  %}
+                   <div class="our_locations__icon">
+                     {% if item.icon.src %}
+                     {% set sizeAttrs = 'width="{{ item.icon.width }}" height="{{ item.icon.height }}"' %}
+                     {% if item.icon.size_type == 'auto' %}
+                     {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                     {% elif item.icon.size_type == 'auto_custom_max' %}
+                     {% set sizeAttrs = 'width="{{ item.icon.max_width }}" height="{{ item.icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                     {% endif %}
+                     {% set loadingAttr = item.icon.loading != 'disabled' ? 'loading="{{ item.icon.loading }}"' : '' %}
+                     <img src="{{ item.icon.src }}" alt="{{ item.icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                     {% endif %}
+                   </div>
+                {% endif %}
+                 
+              
+                 <div class="our_locations__details">
+                   {% if item.header  %}
+                      <h3>
+                        {{ item.header }}
+                     </h3>
+                   {% endif %}
+                    {{ item.address }}
+                 </div>
+               </div>
+            {% endfor %}
+          </div>
+     </div>
+</section>
+

@@ -1,0 +1,103 @@
+[ {
+  "id" : "210ed3ca-a070-c303-8251-e4fe8b9f3c71",
+  "name" : "header",
+  "display_width" : null,
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Have a free session"
+}, {
+  "id" : "7828c561-f1c9-539a-3487-524279696934",
+  "name" : "richtext_field",
+  "display_width" : null,
+  "label" : "Rich text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>\n<p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>"
+}, {
+  "id" : "36c19185-0c20-d3d8-3595-446c273f61bb",
+  "name" : "button_text",
+  "display_width" : null,
+  "label" : "Button Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Check out!"
+}, {
+  "id" : "34d6add0-051d-b60e-3b00-ed71d682ac8a",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "1ef7d952-061b-62e4-964c-f8ef2f3688aa",
+    "name" : "bg_color",
+    "display_width" : null,
+    "label" : "BG Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#EFE8E3",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "bg_color" : {
+      "color" : "#EFE8E3",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "0afa4db7-09b4-a36b-f666-900f8eb89baa",
+  "name" : "button_link",
+  "display_width" : null,
+  "label" : "Button Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "9130def4-2d12-70cf-f409-75c30ce09c43",
+  "name" : "bg_logo",
+  "display_width" : null,
+  "label" : "BG Logo",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://www.remotish.agency/hubfs/LogoMark-1.png",
+    "alt" : "LogoMark-1",
+    "loading" : "lazy",
+    "width" : 738,
+    "height" : 678,
+    "max_width" : 738,
+    "max_height" : 678
+  }
+} ]

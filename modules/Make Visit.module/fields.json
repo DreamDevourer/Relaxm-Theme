@@ -1,0 +1,31 @@
+[ {
+  "id" : "ab5cc8bc-f7fd-24f9-4c15-4c92700bb928",
+  "name" : "header",
+  "display_width" : null,
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h2>Make a Visit</h2>\n<p>Felis placerat gravida sed nibh id purus. Dictum tristique sagittis lobortis sed. Fames fermentum viverra aliquet volutpat. Fames fermentum viverra aliquet volutpat.</p>"
+}, {
+  "id" : "2c26265a-81c6-5bc7-ea2c-7dba68857696",
+  "name" : "image_field",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto_custom_max",
+    "src" : "https://www.remotish.agency/hubfs/MAIN%20IMAGE%20(2)%20(1).png",
+    "alt" : "MAIN IMAGE (2) (1)",
+    "loading" : "lazy",
+    "width" : 1606,
+    "height" : 2136,
+    "max_width" : 558,
+    "max_height" : 742
+  }
+} ]

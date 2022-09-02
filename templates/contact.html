@@ -1,0 +1,82 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Contact
+  screenshotPath: ../images/Thumbnails/FormR.png
+--> 
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--contact"
+%}
+
+  {# Cards #}
+
+ {% dnd_section
+       full_width = true,
+       padding={
+        'top': 0,
+        'bottom': 0,
+        'left' : 0,
+        'right' : 0
+    }
+     
+      %}
+             {% dnd_module
+                    path='../modules/Contact Hero', 
+                   
+                  %}
+            {% end_dnd_module %}
+
+  {% end_dnd_section %}
+
+
+
+ {% dnd_section
+       full_width = true,
+       padding={
+        'top': 0,
+        'bottom': 0,
+        'left' : 0,
+        'right' : 0
+    }
+     
+      %}
+
+
+  {% end_dnd_section %}
+
+
+
+
+
+ {% dnd_section
+       full_width = true,
+     padding={
+        'default': {'top': 100,'bottom': 100 },
+        'mobile': {'top': 0,'bottom':50 }
+      }
+     
+      %}
+             {% dnd_module
+                    path='../modules/Our locations', 
+                   
+                  %}
+            {% end_dnd_module %}
+
+  {% end_dnd_section %}
+
+
+
+
+
+
+
+
+
+
+
+{% end_dnd_area %}
+{% endblock body %}

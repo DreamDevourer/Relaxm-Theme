@@ -1,0 +1,84 @@
+ <style>
+					{% scope_css %}
+.social_area li a svg path { fill:{{ module.style.icon_color.color }}; }
+					{% end_scope_css %}
+</style>
+
+<footer class="footer__main">
+      <div class="container">
+        
+         <div class="footer__logo">
+           
+           {% logo
+              override_inherited_src="{{ module.logo_field.override_inherited_src }}"
+              src="{{ module.logo_field.src }}"
+              alt="{{ module.logo_field.alt }}"
+              width="{{ module.logo_field.width }}"
+              height="{{ module.logo_field.height }}"
+              suppress_company_name="{{ module.logo_field.suppress_company_name }}"
+            %}
+          
+         </div>
+        
+         <div class="footer__row">
+             <div class="footer__visit">
+                <h5>
+                   {{ module.column_1.text_field }}
+                </h5>
+                <div class="footer__address">
+                   {{ module.column_1.richtext_field }}
+                </div>
+            </div>
+            <div class="footer__content">
+              <h5>
+                {{ module.column_2.text_field }}
+              </h5>
+              <div class="social_area">
+                  <ul>
+                    
+                    {% for item in module.column_2.social_media_group %}
+                    <li> 
+                      <a href="{{ item.link }}"> 
+                        {% icon
+                          name="{{ item.icon_field.name }}"
+                          style="{{ item.icon_field.type }}"
+                          unicode="{{ item.icon_field.unicode }}"
+                          icon_set="{{ item.icon_field.icon_set }}"
+                        %}
+                      </a>
+                    </li>
+                    {% endfor %}
+                    
+                   
+                    
+                    
+                    
+                </ul>
+              </div>
+           </div>
+           <div class="footer__about">
+               <h5>
+                 {{ module.column_3.text_field_1 }}
+               </h5>
+              <div class="footer__abouttext">
+                {{ module.column_3.richtext_field_1 }}
+             </div>
+           </div>
+           
+           
+         </div>
+         <div class="footer__copyright_new">
+             {{ module.text_field_2 }}
+         </div>
+        
+        
+      </div>
+</footer>
+
+
+
+{% require_css %}
+ <style>
+.social_area li a svg path { fill:rgba({{ module.style.icon_color.color|convert_rgb }},{{ module.style.icon_color.opacity / 100 }}); }
+</style>
+{% end_require_css %}

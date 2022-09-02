@@ -1,0 +1,55 @@
+[ {
+  "id" : "0e0de2e5-7833-0e7b-ac4b-636db5978849",
+  "name" : "image_field",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://www.remotish.agency/hubfs/Rectangle%206%20(1).png",
+    "alt" : "Rectangle 6 (1)",
+    "loading" : "lazy",
+    "width" : 1382,
+    "height" : 1386,
+    "max_width" : 1382,
+    "max_height" : 1386
+  }
+}, {
+  "id" : "bdece1ab-fbac-df98-3ada-e5b1f6a672b7",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "2eaba2a7-f468-6977-b31e-7d56bde1c27b",
+    "name" : "invert_order",
+    "display_width" : null,
+    "label" : "Invert Content Order",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "invert_order" : false
+  }
+}, {
+  "id" : "da4c866d-b05c-5787-0fd6-159e986e8fdb",
+  "name" : "richtext_field",
+  "display_width" : null,
+  "label" : "Rich text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h2>A Better Place To Meditate</h2>\n<p>Felis placerat gravida sed nibh id purus. Dictum tristique sagittis lobortis sed. Fames fermentum viverra aliquet volutpat. Cursus turpis cursus vitae ut enim habitasse nec cursus amet. Egestas a arcu morbi amet nulla arcu est. Massa enim sed consectetur ornare. Amet, nibh sollicitudin tempor tincidunt velit</p>"
+} ]

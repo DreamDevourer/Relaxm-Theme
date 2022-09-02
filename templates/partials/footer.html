@@ -1,0 +1,31 @@
+<!--
+  templateType: global_partial
+  label: Footer
+-->
+<footer class="footer">
+  {% dnd_area "footer"
+    label="Footer",
+    class="footer__container content-wrapper"
+  %}
+
+       {% dnd_section
+       padding={
+        'top': 0,
+        'bottom': 0,
+        'left' : 0,
+        'right' : 0
+    }
+     
+      %}
+             {% dnd_module
+                    path='../../modules/Footer', 
+                    label="Hero Section"
+                  %}
+            {% end_dnd_module %}
+
+      {% end_dnd_section %}
+  
+  
+ 
+  {% end_dnd_area %}
+</footer>

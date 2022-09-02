@@ -1,0 +1,62 @@
+<div class="hero_section">
+  <div class="container">
+    <div class="hero_inner">
+      <div class="hero_left">
+        {% if module.thumb.src %}
+        {% set sizeAttrs = 'width="{{ module.thumb.width }}" height="{{ module.thumb.height }}"' %}
+        {% if module.thumb.size_type == 'auto' %}
+        {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+        {% elif module.thumb.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ module.thumb.max_width }}" height="{{ module.thumb.max_height }}" style="max-width: 100%; height: auto;"' %}
+        {% endif %}
+        {% set loadingAttr = module.thumb.loading != 'disabled' ? 'loading="{{ module.thumb.loading }}"' : '' %}
+        <img src="{{ module.thumb.src }}" alt="{{ module.thumb.alt }}" {{ loadingAttr }}>
+        {% endif %}
+      </div>
+      <div class="hero_right">
+        <div class="inner">
+          {% if module.title %}<h1>{{ module.title }}</h1>{% endif %}
+          
+          {% if module.content %}
+          <div class="text">
+           {{ module.content }}
+          </div>
+          {% endif %}
+          
+          {% if module.button.text_field %}
+          <div class="button_wrap">
+            {% set href = module.button.link_field.url.href %}
+            {% if module.button.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a class="button" href="{{ href }}"
+               {% if module.button.link_field.open_in_new_tab %}target="_blank"{% endif %}
+               {% if module.button.link_field.rel %}rel="{{ module.button.link_field.rel }}"{% endif %}
+               >
+              {{ module.button.text_field }}
+            </a>
+          </div>
+          {% endif %}
+        </div>
+        <div class="link">
+          {% for item in module.links %}
+          {% if item.text_field_1 %}
+          <div>
+            {% set href = item.link_field_1.url.href %}
+            {% if item.link_field_1.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"
+               {% if item.link_field_1.open_in_new_tab %}target="_blank"{% endif %}
+               {% if item.link_field_1.rel %}rel="{{ item.link_field_1.rel }}"{% endif %}
+               >
+              {{ item.text_field_1 }}
+            </a>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

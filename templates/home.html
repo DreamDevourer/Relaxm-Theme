@@ -1,0 +1,453 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home
+  screenshotPath: ../images/Thumbnails/HomeR.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+{# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--home"
+%}
+
+
+   
+       {% dnd_section
+       padding={
+        'top': 0,
+        'bottom': 0,
+        'left' : 0,
+        'right' : 0
+    }
+     
+      %}
+             {% dnd_module
+                    path='../modules/Hero Section', 
+                    label="Hero Section"
+                    links = [
+                       {
+                        text_field_1 : "Instagram",
+                       },
+                        {
+                        text_field_1 : "Facebook",
+                       },
+                        {
+                        text_field_1 : "Youtube",
+                       }
+                    
+                    ]
+                  %}
+            {% end_dnd_module %}
+
+      {% end_dnd_section %}
+
+
+
+
+   
+       {% dnd_section
+       padding={
+        'top': 0,
+        'bottom': 0,
+        'left' : 0,
+        'right' : 0
+    }
+     
+      %}
+             {% dnd_module
+                    path='../modules/Our Spa Section', 
+                    content_point = [
+                         {
+                         text_field : "Spa Headline",
+                         icon : {
+                            src : "{{ get_asset_url('../../images/icon-1.svg') }}"
+                           }
+                         },
+                          {
+                         text_field : "Spa Headline",
+                         icon : {
+                            src : "{{ get_asset_url('../../images/icon-1.svg') }}"
+                           }
+                         },
+                          {
+                         text_field : "Spa Headline",
+                         icon : {
+                            src : "{{ get_asset_url('../../images/icon-1.svg') }}"
+                           }
+                         },
+                          {
+                         text_field : "Spa Headline",
+                         icon : {
+                            src : "{{ get_asset_url('../../images/icon-1.svg') }}"
+                           }
+                         }
+                    ]
+                     
+                  %}
+            {% end_dnd_module %}
+
+      {% end_dnd_section %}
+
+
+
+
+
+   
+       {% dnd_section
+       padding={
+        'top': 0,
+        'bottom': 0,
+        'left' : 0,
+        'right' : 0
+    }
+     
+      %}
+             {% dnd_module
+                    path='../modules/Faq Section', 
+                    single_accordion = [
+                        {
+                        title : "Questions Section",
+                        single_tab : [
+                          {
+                              title : "Question Answer",
+                              content_title :" Question Answer",
+                              content : "
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>
+                              <p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>
+
+                              ",
+                              thumb : {
+                                src : "{{ get_asset_url('../../images/thumb-tab.png') }}"
+
+                              },
+                              button : {
+                                text_field : "Check out!"
+                              
+                              }
+                          
+                          },
+                           {
+                              title : "Question Answer",
+                              content_title :" Question Answer",
+                              content : "
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>
+                              <p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>
+
+                              ",
+                              thumb : {
+                              src : "{{ get_asset_url('../../images/thumb-tab.png') }}"
+
+                              },
+                              button : {
+                                text_field : "Check out!"
+                              
+                              }
+                          
+                          },
+                           {
+                              title : "Question Answer",
+                              content_title :" Question Answer",
+                              content : "
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>
+                              <p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>
+
+                              ",
+                              thumb : {
+                              src : "{{ get_asset_url('../../images/thumb-tab.png') }}"
+
+                              },
+                              button : {
+                                text_field : "Check out!"
+                              
+                              }
+                          
+                          }
+                        
+                        ]
+                        
+                        },
+                        
+                        {
+                        title : "Questions Section",
+                        single_tab : [
+                          {
+                              title : "Question Answer",
+                              content_title :" Question Answer",
+                              content : "
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>
+                              <p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>
+
+                              ",
+                              thumb : {
+                              src : "{{ get_asset_url('../images/thumb-tab.png') }}"
+                              
+
+                              },
+                              button : {
+                                text_field : "Check out!"
+                              
+                              }
+                              
+                          
+                          },
+                          {
+                              title : "Question Answer",
+                              content_title :" Question Answer",
+                              content : "
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>
+                              <p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>
+
+                              ",
+                              thumb : {
+                              src : "{{ get_asset_url('../images/thumb-tab.png') }}"
+
+                              }
+                              
+                          
+                          },
+                          {
+                              title : "Question Answer",
+                              content_title :" Question Answer",
+                              content : "
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>
+                              <p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>
+
+                              ",
+                              thumb : {
+                              src : "{{ get_asset_url('../images/thumb-tab.png') }}"
+
+                              }
+                              
+                          
+                          }
+                        
+                        ]
+                        
+                        },
+                        
+                        
+                        {
+                        title : "Questions Section",
+                        single_tab : [
+                          {
+                              title : "Question Answer",
+                              content_title :" Question Answer",
+                              content : "
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>
+                              <p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>
+
+                              ",
+                              thumb : {
+                              src : "{{ get_asset_url('../images/thumb-tab.png') }}"
+
+                              }
+                              
+                          
+                          },
+                          {
+                              title : "Question Answer",
+                              content_title :" Question Answer",
+                              content : "
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>
+                              <p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>
+
+                              ",
+                              thumb : {
+                             src : "{{ get_asset_url('../images/thumb-tab.png') }}"
+
+                              }
+                              
+                          
+                          },
+                          {
+                              title : "Question Answer",
+                              content_title :" Question Answer",
+                              content : "
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>
+                              <p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>
+
+                              ",
+                              thumb : {
+                              src : "{{ get_asset_url('../images/thumb-tab.png') }}"
+
+                              }
+                              
+                          
+                          }
+                        
+                        ]
+                        
+                        },
+                         {
+                        title : "Questions Section",
+                        single_tab : [
+                          {
+                              title : "Question Answer",
+                              content_title :" Question Answer",
+                              content : "
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>
+                              <p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>
+
+                              ",
+                              thumb : {
+                              src : "{{ get_asset_url('../images/thumb-tab.png') }}"
+
+                              }
+                              
+                          
+                          },
+                          {
+                              title : "Question Answer",
+                              content_title :" Question Answer",
+                              content : "
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>
+                              <p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>
+
+                              ",
+                              thumb : {
+                             src : "{{ get_asset_url('../images/thumb-tab.png') }}"
+
+                              }
+                              
+                          
+                          },
+                          {
+                              title : "Question Answer",
+                              content_title :" Question Answer",
+                              content : "
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>
+                              <p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna.</p>
+
+                              ",
+                              thumb : {
+                              src : "{{ get_asset_url('../images/thumb-tab.png') }}"
+
+                              }
+                              
+                          
+                          }
+                        
+                        ]
+                        
+                        }
+                        
+                        
+                        
+                    
+                     ]
+                     
+                  %}
+            {% end_dnd_module %}
+
+      {% end_dnd_section %}
+
+
+
+
+
+
+ {% dnd_section
+       full_width = true,
+       padding={
+        'top': 0,
+        'bottom': 0,
+        'left' : 0,
+        'right' : 0
+    }
+     
+      %}
+             {% dnd_module
+                    path='../modules/Our Team Section', 
+                    label="Our Team Section",
+                     single_slide = [
+                      {
+                      
+                       thumb :  {
+                          src : "{{ get_asset_url('../../images/Rectangle_7.png') }}"
+                       },
+                       title : "Lorem Ipsum",
+                       content : "10 Years of Spa"
+                       
+                      },
+                      {
+                      
+                       thumb :  {
+                          src : "{{ get_asset_url('../../images/Rectangle_7.png') }}"
+                       },
+                       title : "Lorem Ipsum",
+                       content : "10 Years of Spa"
+                       
+                      },
+                      {
+                      
+                       thumb :  {
+                          src : "{{ get_asset_url('../../images/Rectangle_7.png') }}"
+                       },
+                       title : "Lorem Ipsum",
+                       content : "10 Years of Spa"
+                       
+                      },
+                      {
+                      
+                       thumb :  {
+                          src : "{{ get_asset_url('../../images/Rectangle_7.png') }}"
+                       },
+                       title : "Lorem Ipsum",
+                       content : "10 Years of Spa"
+                       
+                      }
+                    
+                    ]
+                  %}
+            {% end_dnd_module %}
+
+  {% end_dnd_section %}
+
+
+
+
+ {% dnd_section
+       full_width = true,
+       padding={
+        'top': 0,
+        'bottom': 0,
+        'left' : 0,
+        'right' : 0
+    }
+     
+      %}
+             {% dnd_module
+                    path='../modules/Have a free session', 
+                    label="Have a free session"
+                  %}
+            {% end_dnd_module %}
+
+  {% end_dnd_section %}
+
+
+
+ {% dnd_section
+       full_width = true,
+       padding={
+        'top': 0,
+        'bottom': 0,
+        'left' : 0,
+        'right' : 0
+    }
+     
+      %}
+             {% dnd_module
+                    path='../modules/Map Module', 
+                    label="Map Module"
+                  %}
+            {% end_dnd_module %}
+
+  {% end_dnd_section %}
+  
+{% end_dnd_area %}
+{% endblock body %}

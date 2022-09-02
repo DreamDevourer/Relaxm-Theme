@@ -1,0 +1,170 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: Relaxm - blog post
+  screenshotPath: ../images/Thumbnails/ArticleR.png
+-->
+{% set template_css = "../../css/templates/blog.css" %}
+{% set template_css_post = "../../css/templates/Blog_Post.css" %}
+
+{% extends "./layouts/base.html" %}
+
+
+{% block body %}
+<div id="main-content" class="body-container-wrapper blog_article__main">
+  <div class="body-container body-container--blog-post">
+
+    {# Blog post #}
+
+    <div class="content-wrapper">
+      <!-- top part -->
+      <div class="top_postheader_part">
+        
+        <div class="content_name">
+          <h1>{{ content.name }}</h1>
+        </div>
+      <div class="sociale_postshare_tag">
+        {% if content.topic_list %}
+        <p id="hubspot-topic_data" >
+          {% for topic in content.topic_list %}
+          <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
+          {% endfor %}
+        </p>
+        {% endif %}
+      </div>
+      
+      <div class="blog_post__captiontext">
+        {% rich_text "caption_text" label="Caption Text" html=' 
+   <p> You are probably familiar with HubSpot’s knowledge base tool simply from searching online for topics related to the CRM, and finding tons of articles HubSpot publishes on its own knowledge base to teach consumers on how to use their tools. In short, the knowledge base is a self-serve library that can help your customers or employees find answers fast. </p>
+   ' %}
+      </div>
+      
+      <div class="blog_postauthor_row">
+        <div class="author__image">
+          <span class="blog_postauthor_image">
+            {% set loadingAvatar = content.blog_post_author.avatar.loading != 'lazy' ? 'loading="{{ content.blog_post_author.avatar.loading }}"' : '' %}
+            <img loading="lazy" src="{{ content.blog_post_author.avatar }}" alt="Picture of {{ content.blog_post_author.display_name }}" {{ loadingAvatar }}>
+          </span>
+          <div class="blog_postauthor_text">
+            <span class="author-link" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">
+              {{ content.blog_post_author.display_name }}
+            </span> 
+          </div>
+        </div>
+        <span class="headdate-min">
+          <span class="headdate-date">{{ content.publishDate|datetimeformat('%B %e, %Y') }} </span>
+        </span>
+      </div>
+    
+        
+     </div> 
+      
+       
+       <div class="post_featured__image">
+         {% set loadingThumb = content.post_list_summary_featured_image.loading != 'lazy' ? 'loading="{{ content.post_list_summary_featured_image.loading }}"' : '' %}
+         <img loading="lazy" src="{{ content.post_list_summary_featured_image }}" {{ loadingThumb }}>  
+       </div>
+      
+      
+      <article class="post_body__post">
+             
+           <div class="content_body">
+             {{ content.post_body }}
+          </div>
+      </article>
+      
+      <div class="socialpost_body__post">
+            <div class="footer-social">
+              <ul>
+                <li> <a href="https://www.facebook.com/sharer/sharer.php?u={{ content.absolute_url }}"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+                        <g clip-path="url(#clip0_148_1813)">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 24.4917C0 36.3217 8.59193 46.1589 19.8291 48.1537V30.9679H13.8803V24.3588H19.8291V19.0704C19.8291 13.1217 23.662 9.81819 29.0833 9.81819C30.8005 9.81819 32.6525 10.0819 34.3697 10.3456V16.4272H31.3299C28.421 16.4272 27.7607 17.8807 27.7607 19.7327V24.3588H34.106L33.0491 30.9679H27.7607V48.1537C38.9978 46.1589 47.5897 36.3237 47.5897 24.4917C47.5897 11.3311 36.882 0.563965 23.7949 0.563965C10.7077 0.563965 0 11.3311 0 24.4917Z" fill="#B18372"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_148_1813">
+                            <rect width="47.5897" height="47.5897" fill="white" transform="translate(0 0.563965)"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                  </a> 
+                 </li>
+                <li> 
+                  <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ content.absolute_url }}"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
+                      <path d="M24.3587 1.51587C11.7427 1.51587 1.51562 11.7429 1.51562 24.3589C1.51562 36.975 11.7427 47.202 24.3587 47.202C36.9747 47.202 47.2018 36.975 47.2018 24.3589C47.2018 11.7429 36.9747 1.51587 24.3587 1.51587ZM18.7669 33.8269H14.1412V18.9409H18.7669V33.8269ZM16.4255 17.1134C14.9645 17.1134 14.0198 16.0783 14.0198 14.7982C14.0198 13.4918 14.993 12.4877 16.485 12.4877C17.9769 12.4877 18.8906 13.4918 18.9192 14.7982C18.9192 16.0783 17.9769 17.1134 16.4255 17.1134ZM35.6613 33.8269H31.0355V25.5772C31.0355 23.657 30.3645 22.353 28.6917 22.353C27.414 22.353 26.6549 23.2358 26.3194 24.0853C26.1957 24.3875 26.1647 24.8158 26.1647 25.2417V33.8245H21.5366V23.6879C21.5366 21.8296 21.4771 20.2757 21.4153 18.9385H25.4342L25.646 21.0062H25.7388C26.348 20.0354 27.8399 18.603 30.336 18.603C33.3793 18.603 35.6613 20.6422 35.6613 25.0252V33.8269Z" fill="#B18372"/>
+                    </svg>
+                  </a>
+                </li>
+
+                <li> 
+                  <a href="https://twitter.com/intent/tweet?text=I+found+this+interesting+blog+post&url={{ content.absolute_url }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
+                      <path d="M28.4552 23.6027L23.1109 21.109C22.6445 20.8925 22.2614 21.1352 22.2614 21.6515V26.3486C22.2614 26.865 22.6445 27.1077 23.1109 26.8911L28.4529 24.3974C28.9216 24.1785 28.9216 23.8216 28.4552 23.6027ZM24.6409 1.15698C12.0249 1.15698 1.79785 11.384 1.79785 24.0001C1.79785 36.6161 12.0249 46.8431 24.6409 46.8431C37.257 46.8431 47.484 36.6161 47.484 24.0001C47.484 11.384 37.257 1.15698 24.6409 1.15698ZM24.6409 33.2801C12.9481 33.2801 12.7435 32.2259 12.7435 24.0001C12.7435 15.7742 12.9481 14.7201 24.6409 14.7201C36.3337 14.7201 36.5384 15.7742 36.5384 24.0001C36.5384 32.2259 36.3337 33.2801 24.6409 33.2801Z" fill="#B18372"/>
+                    </svg>
+                  </a> 
+                </li>
+          </ul>
+            </div>
+          </div>
+      </div>
+      
+      
+      {% if group.allow_comments %}
+        <div class="blog-comments">
+          {% module 'blog_comments'
+            path='@hubspot/blog_comments',
+            label="Blog comments"
+          %}
+        </div>
+      {% endif %}
+    </div>
+
+    {# Recent posts listing #}
+
+    {# This macro is used to format each recent post card and gets passed to the related_blog_posts HubL tag below #}
+
+    {% macro related_posts(post, count, total) %}
+      {% if count == 1 %}
+        <section class="blog-related-posts">
+          <div class="content-wrapper">
+            <h2>Related content</h2>
+            <div class="blog-related-posts__list wrticle_indexs__row">
+      {% endif %}
+              <article class="article_indexs__column">
+                <div class="article_indexs__image" style="background-image:url('{{ post.featured_image }}')">
+
+                </div>
+                <div class="article_indexs__content">
+                  <h3>
+                    {{ post.name }}
+                  </h3>
+                  <div class="tags">
+                    {% for tag in post.tag_list %}
+                    <a class="blog-index__post-tag" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>{% if !loop.last %}<span>, </span>{% endif %}
+                    {% endfor %}
+                  </div>
+                  <div class="content_post">
+                    {{ post.post_list_content|striptags|truncatehtml(150) }}
+                  </div>
+                  <div class="post_date">
+                    {{ post.publish_date|datetimeformat('%b %e, %Y') }}
+                  </div>
+                </div>
+              </article>
+        {% if count == total %}
+            </div>
+          </div>
+        </section>
+      {% endif %}
+    {% endmacro %}
+
+      {% related_blog_posts
+        limit=3,
+        no_wrapper=True,
+        post_formatter="related_posts"
+      %}
+
+ 
+</div>
+{% endblock body %}

@@ -1,0 +1,24 @@
+{
+  "label" : "Relaxm",
+  "preview_path" : "./templates/home.html",
+  "screenshot_path" : "./images/ThumbnailR.png",
+  "enable_domain_stylesheets" : false,
+  "is_available_for_new_content" : true,
+  "responsive_breakpoints" : [ {
+    "name" : "mobile",
+    "previewWidth" : {
+      "value" : 477,
+      "units" : "px"
+    },
+    "mediaQuery" : "@media (max-width: 767px)"
+  } ],
+  "version" : "1.0",
+  "author" : {
+    "name" : "Remotish Agency",
+    "email" : "marketplace@remotish.agency",
+    "url" : "https://www.remotish.agency/"
+  },
+  "documentation_url" : "https://marketplace.remotish.agency/relaxm-theme/documentation",
+  "example_url" : "https://marketplace.remotish.agency/relaxm-theme",
+  "license" : "./license.txt"
+}

@@ -1,0 +1,114 @@
+<section class="featured_content__main">
+     <div class="container">
+       {% if  module.header %}
+       <div class="featured_content__header">
+         <h1>
+           {{ module.header }}
+         </h1>
+       </div>
+       {% endif %}
+        <div class="featured_content__row">
+          <div class="featured_content__left">
+             {% set tag_posts = blog_recent_tag_posts(module.blog_field, module.tag_field, module.number_of_post) %}
+             <div class="featured_tagpost__row">
+             {% for tag_post in tag_posts %}
+                 <div class="featured_tagpost__column">
+                       <div class="ftopic_left" style="background-image:url('{{ tag_post.featured_image }}')">
+                          
+                       </div>
+                       <div class="ftopic_right">
+                         <div class="ftopik__header">
+                           <h2>
+                             {{ tag_post.name }}
+                           </h2>
+                         </div>
+                         <div class="ftopik__tag">
+                           {% for tag in tag_post.tag_list %}
+                           <a class="" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>{% if !loop.last %}<span>, </span>{% endif %}
+                           {% endfor %}
+                         </div>
+                         <div class="ftopik__details">
+                           <p>
+                             {{ tag_post.post_list_content|striptags|truncatehtml(250) }}
+                           </p>
+                         </div>
+                         <div class="ftopik__date">
+                            {{ tag_post.publish_date|datetimeformat('%b %d, %Y') }} 
+                         </div>
+                      </div>
+                    <a class="position_link" href="{{tag_post.absolute_url}}"> </a>
+                 </div>
+              {% endfor %} 
+            </div>
+            
+            <div class="featured_content__arrow">
+              <span class="fc__rightrrow">
+                <img src="https://www.remotish.agency/hubfs/Image2022/dashicons_arrow-right-alt2.svg" alt="icon">
+              </span>
+              <span  class="fc__lefttrrow">
+                <img src="https://www.remotish.agency/hubfs/Image2022/Vector%20(23).svg" alt="icon">
+              </span>
+            </div>
+            
+            
+          </div>
+          <div class="featured_content__right">
+               <div class="fcright__inner">
+                   <div class="fcright__img">
+                       {% if module.icon.src %}
+                       {% set sizeAttrs = 'width="{{ module.icon.width }}" height="{{ module.icon.height }}"' %}
+                       {% if module.icon.size_type == 'auto' %}
+                       {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                       {% elif module.icon.size_type == 'auto_custom_max' %}
+                       {% set sizeAttrs = 'width="{{ module.icon.max_width }}" height="{{ module.icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                       {% endif %}
+                       {% set loadingAttr = module.icon.loading != 'disabled' ? 'loading="{{ module.icon.loading }}"' : '' %}
+                       <img src="{{ module.icon.src }}" alt="{{ module.icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                       {% endif %}
+                   </div>
+                 <div class="fcright__text">
+                     {{ module.content_box.richtext_field }}
+                 </div>
+                 <div class="fcright__social">
+                     <ul>
+                       
+                       {% for item in module.content_box.social_area %}
+                       <li> 
+                         {% set href = item.link_field.url.href %}
+                         {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                         {% set href = "mailto:" + href %}
+                         {% endif %}
+                         <a href="{{ href }}"
+                            {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                            {% if item.link_field.rel %}rel="{{ item.link_field.rel }}"{% endif %}
+                            >
+                           
+                           {% if item.icon_image.src %}
+                           {% set sizeAttrs = 'width="{{ item.icon_image.width }}" height="{{ item.icon_image.height }}"' %}
+                           {% if item.icon_image.size_type == 'auto' %}
+                           {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                           {% elif item.icon_image.size_type == 'auto_custom_max' %}
+                           {% set sizeAttrs = 'width="{{ item.icon_image.max_width }}" height="{{ item.icon_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                           {% endif %}
+                           {% set loadingAttr = item.icon_image.loading != 'disabled' ? 'loading="{{ item.icon_image.loading }}"' : '' %}
+                           <img src="{{ item.icon_image.src }}" alt="{{ item.icon_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                           {% endif %}
+
+                         </a>
+                         
+                             
+                        
+                       </li>
+                       {% endfor %}
+                        
+                       
+                     </ul>
+                 </div>
+               </div>
+          </div>
+       </div>
+       
+       
+       
+  </div>
+</section>

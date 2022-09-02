@@ -1,0 +1,22 @@
+<section class="contact_form__main">
+    <div class="container">
+       <div class="contact_form__header">
+          <h2 class="form-title">
+                {{ module.header }}
+          </h2>
+      </div>
+       <div class="contact_form__row">
+             <div class="contact_form__cover">
+                 {% form
+	form_to_use="{{ module.form_field.form_id }}"
+	response_response_type="{{ module.form_field.response_type }}"
+	response_message="{{ module.form_field.message }}"
+	response_redirect_id="{{ module.form_field.redirect_id }}"
+	response_redirect_url="{{module.form_field.redirect_url}}"
+	gotowebinar_webinar_key="{{ module.form_field.gotowebinar_webinar_key }}"
+   follow_up_type_simple="{{ module.followupemail_field }}"
+%}
+             </div>
+        </div>
+  </div>
+</section>

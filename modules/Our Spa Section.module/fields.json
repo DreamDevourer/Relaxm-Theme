@@ -1,0 +1,115 @@
+[ {
+  "id" : "6b84c4c4-ab48-8a4f-ea73-cffac5a2e1d2",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Our Spa"
+}, {
+  "id" : "392b4c31-5c73-85d3-5346-2479a4c64834",
+  "name" : "thumb_link",
+  "display_width" : null,
+  "label" : "Thumb Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "8f42416b-09df-fd87-e85f-3fd680688a41",
+  "name" : "thumb",
+  "display_width" : null,
+  "label" : "Thumb",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://www.remotish.agency/hubfs/Rectangle%205.png",
+    "alt" : "Rectangle 5",
+    "loading" : "lazy",
+    "width" : 659,
+    "height" : 735,
+    "max_width" : 659,
+    "max_height" : 735
+  }
+}, {
+  "id" : "b5246098-4af7-815d-6c9d-c420ea00bf4a",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam vitae nisl non, proin arcu adipiscing pellentesque hac. Quis pellentesque in pellentesque porta felis aliquet vestibulum. Sem porttitor leo maecenas luctus interdum. Mattis volutpat in consectetur eget consectetur in semper ut. Augue at platea donec faucibus ac augue sit. Sed varius turpis id velit tellus. Orci vestibulum auctor non egestas lacinia vitae est morbi egestas. Neque nulla viverra semper scelerisque luctus netus nunc, tristique.</p>\n<p>Vulputate nisi. Ante dictum sit leo consectetur adipiscing. Aliquam est tortor sollicitudin rutrum. Ultrices convallis risus quis tristique. Pretium quis eu velit tortor, magna. Nulla eget mattis facilisi dignissim in mauris, mi lectus. Id vitae ullamcorper ipsum mi, sit rutrum. In erat integer et neque lacus. Varius iaculis molestie vitae cursus risus nullam molestie tellus pellentesque. Dignissim neque eros nulla eros, euismod ante est. Orci arcu, non cursus mi amet aliquam tortor odio. Nibh praesent commodo convallis rhoncus. Consectetur orci in diam id pulvinar.</p>"
+}, {
+  "id" : "796cce31-aeec-b2da-228c-a3e5411038d5",
+  "name" : "content_point",
+  "display_width" : null,
+  "label" : "Content Point",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "cc971e0c-f5b2-47b8-5760-0189af612ba9",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "cc971e0c-f5b2-47b8-5760-0189af612ba9",
+    "name" : "text_field",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "a961e94e-49d4-26fd-5e81-1308d47196fd",
+    "name" : "icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }
+} ]

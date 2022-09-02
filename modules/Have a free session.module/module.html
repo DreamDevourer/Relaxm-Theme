@@ -1,0 +1,33 @@
+<section class="havefree_session__main" >
+    <div class="container">
+       <div class="havefree_session__innerrow" style="background-color: {{ module.style.bg_color.color }}; background-image:url('{{ module.bg_logo.src }}">
+          <div class="havefree_session__header">
+           <div class="hs__header">
+               <h2>
+                 {{ module.header }}
+              </h2>
+           </div>
+          {% if module.button_text  %}
+            <div class="hs__button">
+              {% set href = module.button_link.url.href %}
+              {% if module.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              <a class="button" href="{{ href }}"
+                 {% if module.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if module.button_link.rel %}rel="{{ module.button_link.rel }}"{% endif %}
+                 >
+                {{ module.button_text }}
+              </a>
+           </div>
+          {% endif %}
+        </div>
+       <div class="havefree_session__text">
+          {{ module.richtext_field }}
+       </div>
+      
+      </div>
+      
+    </div>
+</section>
+

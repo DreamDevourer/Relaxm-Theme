@@ -1,0 +1,37 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Landing page
+  screenshotPath: ../images/Thumbnails/lp2.png
+-->
+{% extends "./layouts/base.html" %}
+
+
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--landing-page"
+%}
+
+  {# Hero banner #}
+
+  {% include_dnd_partial
+ 
+    path="../sections/hero-banner.html"
+    context={
+      "content": "<h1>Download your free eBook</h1><p>Use this space to tell everyone what your eBook is all about.</p>",
+    }
+  %}
+
+  {# Three column image with text #}
+
+  {% include_dnd_partial
+    path="../sections/multi-column-content.html",
+    context={
+      "background_color": "#F8F6F7"
+    }
+  %}
+
+{% end_dnd_area %}
+{% endblock body %}

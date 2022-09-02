@@ -1,0 +1,13 @@
+[ {
+  "id" : "5abf4475-28f0-bb2f-6356-f2b792ed8338",
+  "name" : "header",
+  "display_width" : null,
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Learn more with me"
+} ]

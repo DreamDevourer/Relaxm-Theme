@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Alternate%20List:SOLID",
+  "host_template_types" : [ "BLOG_LISTING" ],
+  "module_id" : 75085746759,
+  "label" : "Blog Listing Index",
+  "is_available_for_new_content" : true
+}

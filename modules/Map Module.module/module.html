@@ -1,0 +1,41 @@
+<section class="map_module__main">
+    <div class="container">
+      
+      {% if module.text_field_1 %}
+      <div class="map_module__header">
+         <h2>
+           {{ module.text_field_1 }}
+        </h2>
+      </div>
+      {% endif %}
+      <div class="map_module__rowinner">
+          <div class="map_module__left">
+            <iframe src="{{ module.map_link }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+         <div class="map_module__right">
+           {% for item in module.address_group %}
+            <div class="map_module__coumn">
+               <div class="map_pin">
+                 {% if item.icon.src %}
+                 {% set sizeAttrs = 'width="{{ item.icon.width }}" height="{{ item.icon.height }}"' %}
+                 {% if item.icon.size_type == 'auto' %}
+                 {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                 {% elif item.icon.size_type == 'auto_custom_max' %}
+                 {% set sizeAttrs = 'width="{{ item.icon.max_width }}" height="{{ item.icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                 {% endif %}
+                 {% set loadingAttr = item.icon.loading != 'disabled' ? 'loading="{{ item.icon.loading }}"' : '' %}
+                 <img src="{{ item.icon.src }}" alt="{{ item.icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                 {% endif %}
+              </div>
+              <div class="map_address">
+                 <h5>
+                   {{ item.text_field }}
+                </h5>
+                {{ item.richtext_field }}
+              </div>
+            </div>
+           {% endfor %}
+        </div>
+      </div>
+    </div>
+</section>

@@ -1,0 +1,81 @@
+<section class="blog_listing__index">
+    <div class="container">
+      {% if  module.header  %}
+      <div class="blog_listing__header">
+         <h2>
+           {{ module.header }}
+        </h2>   
+      </div>
+      {% endif %}
+       <div class="blog_search__row">
+           <div class="filter_row">
+               <span>  CATEGORIES  <img src="https://5178761.fs1.hubspotusercontent-na1.net/hubfs/5178761/Vector%20(24).svg" alt="Down Icon"> </span>
+               <ul>
+                 <li>
+                     <a href="#"> CATEGORIES 1 </a>
+                  </li>
+                  <li>
+                     <a href="#"> CATEGORIES 2 </a>
+                  </li>
+                 <li>
+                     <a href="#"> CATEGORIES 2 </a>
+                  </li>
+                 <li>
+                   <a href="#"> CATEGORIES 2 </a>
+                 </li>
+                </ul>
+           </div>
+           <div class="filter_search">
+                 <form action="/{{ site_settings.content_search_results_page_path }}">
+                   {% if module.field_label %}
+                   <label for="term">{{ module.field_label }}</label>
+                   {% endif %}
+                   <input type="text" class="hs-search-field__input" name="term" autocomplete="off" aria-label="{{ module.field_label || "Search" }}" placeholder="Search">
+
+                   <input type="hidden" name="type" value="BLOG_POST">
+                   <input type="hidden" name="type" value="LISTING_PAGE">
+                 
+                 
+                 </form>
+           </div>
+       </div>
+      <div class="blog_index__row">
+        
+         {% for content in contents %}
+           <div class="blog_index__column">
+               <div class="blog_index__image" style="background-image:url('{{ content.featured_image }}')">
+                 
+               </div>
+              <div class="blog_index__text">
+                  <div class="ftopik__header">
+                    <h3>
+                      {{ content.name }}
+                    </h3>
+                  </div>
+                    <div class="ftopik__tag">
+                        {% for tag in content.tag_list %}
+                           <a class="" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>{% if !loop.last %}<span>, </span>{% endif %}
+                           {% endfor %}
+                    </div>
+                    <div class="ftopik__details blog_index__details">
+                      <p>
+                        {{ content.post_list_content|striptags|truncatehtml(150) }}
+                      </p>
+                    </div>
+                    <div class="ftopik__date">
+                      {{ content.publish_date|datetimeformat('%b %d, %Y') }} 
+                    </div>
+             </div>
+             
+              <a class="position_link" href="{{content.absolute_url}}"> </a>
+           </div>
+        
+        {% endfor %}
+        
+        
+        
+       </div>
+      
+      
+  </div>
+</section>

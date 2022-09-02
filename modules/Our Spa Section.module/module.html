@@ -1,0 +1,56 @@
+<div class="our_spa_section">
+  <div class="container">
+    {% if module.title %}
+    <div class="heading">
+      <h2>
+        {{ module.title }}
+      </h2>
+    </div>
+    {% endif %}
+    <div class="our_spa_row">
+      <div class="our_spa_thumb">
+        <div>
+          <div class="play_btn">
+            {% set href = module.thumb_link.url.href %}
+            {% if module.thumb_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"
+               {% if module.thumb_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if module.thumb_link.rel %}rel="{{ module.thumb_link.rel }}"{% endif %}
+               >
+            </a>
+          </div>
+          {% if module.thumb.src %}
+          {% set sizeAttrs = 'width="{{ module.thumb.width }}" height="{{ module.thumb.height }}"' %}
+          {% if module.thumb.size_type == 'auto' %}
+          {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+          {% elif module.thumb.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.thumb.max_width }}" height="{{ module.thumb.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = module.thumb.loading != 'disabled' ? 'loading="{{ module.thumb.loading }}"' : '' %}
+          <img src="{{ module.thumb.src }}" alt="{{ module.thumb.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+        </div>
+        
+      </div>
+      <div class="our_spa_content">
+        <div class="text">
+          {{ module.content }}
+        </div>
+        <div class="points">
+          {% for item in module.content_point %}
+          <div class="single-point">
+            <div class="img">
+              <img src="{{ item.icon.src }}" alt="{{ item.icon.alt }}">
+            </div>
+            <div>
+              {{ item.text_field }}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
